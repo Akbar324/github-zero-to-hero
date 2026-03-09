@@ -26,9 +26,11 @@ jobs:
             - name: Upload Static files
               uses: actions/upload-pages-artifact@v4
               with:
-                path: .
+                path: ./
             # Step 4
             - name: Deploy to GitHub pages
               id: deployment
               uses: actions/deploy-pages@v4
+              with:
+                token: ${{ secrets.GITHUB_TOKEN }}
 

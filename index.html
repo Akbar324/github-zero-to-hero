@@ -3,95 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Portfolio</title>
+    <title>Akbar - Portfolio</title>
+
+    <!-- Link CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header class="hero">
-    <h1>Hi, I'm Akbar</h1>
-    <p>DevOps Learner • Cloud Enthusiast • GitHub Actions Explorer</p>
-    <a href="#projects" class="btn">View My Work</a>
-</header>
-    <!-- Navigation Section -->
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <h1>Hi, I'm Akbar</h1>
+        <p>DevOps Learner • Cloud Enthusiast • GitHub Actions Explorer</p>
+        <a href="#projects" class="btn">View My Work</a>
+    </header>
+
+    <!-- Navigation -->
     <nav>
         <ul>
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
-            <button id="darkToggle">🌙</button>
-            <script src="script.js"></script>
         </ul>
     </nav>
 
     <!-- Home Section -->
     <section id="home">
         <h1>Welcome to My Portfolio</h1>
-        <p>A simple, HTML-only showcase of my work.</p>
+        <p>A simple, clean portfolio built with HTML, CSS, and GitHub Pages.</p>
     </section>
 
     <!-- About Section -->
     <section id="about">
         <h2>About Me</h2>
         <p>
-            Hello! I am [Your Name], a [Your Job Title/Skills].
-            This page is built with only HTML to showcase basic structure.
+            Hello! I am Akbar, a DevOps learner exploring GitHub Actions, CI/CD, and cloud technologies.
         </p>
         <h3>Skills:</h3>
         <ul>
-            <li>HTML</li>
-            <li>Basic Web Structure</li>
+            <li>Git & GitHub</li>
+            <li>GitHub Actions</li>
+            <li>CI/CD Pipelines</li>
+            <li>HTML & CSS Basics</li>
         </ul>
     </section>
 
     <!-- Projects Section -->
     <section id="projects">
         <h2>Projects</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Project Name</th>
-                    <th>Description</th>
-                    <th>Link</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Project 1</td>
-                    <td>A description of the first project.</td>
-                    <td><a href="http://example.com">View Project</a></td>
-                </tr>
-                <tr>
-                    <td>Project 2</td>
-                    <td>A description of the second project.</td>
-                    <td><a href="http://example.com">View Project</a></td>
-                </tr>
-            </tbody>
-        </table>
+
+        <div class="project-grid">
+            <div class="card">
+                <h3>Project 1</h3>
+                <p>Description of project 1.</p>
+                <a href="#">View</a>
+            </div>
+
+            <div class="card">
+                <h3>Project 2</h3>
+                <p>Description of project 2.</p>
+                <a href="#">View</a>
+            </div>
+        </div>
     </section>
 
     <!-- Contact Section -->
     <section id="contact">
         <h2>Contact Me</h2>
-        <p>You can reach me via the following details:</p>
-        <ul>
-            <li>Email: <a href="mailto:your.email@example.com">your.email@example.com</a></li>
-            <li>LinkedIn: <a href="http://linkedin.com">Your Profile</a></li>
-        </ul>
-        <form action="#" method="post">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name">
-            <br>
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="4"></textarea>
-            <br>
-            <input type="submit" value="Send Message">
+        <p>You can reach me via the form below:</p>
+
+        <form action="https://formspree.io/f/your-id" method="POST">
+            <input type="text" name="name" placeholder="Your Name">
+            <input type="email" name="_replyto" placeholder="Your Email">
+            <textarea name="message" placeholder="Your Message"></textarea>
+            <button type="submit">Send</button>
         </form>
     </section>
 
-    <!-- Footer Section -->
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2026 Your Name. All rights reserved.</p>
+        <p>&copy; 2026 Akbar. All rights reserved.</p>
     </footer>
 
 </body>

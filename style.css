@@ -137,3 +137,55 @@ footer {
     color: white;
     margin-top: 40px;
 }
+#darkToggle {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    margin-left: 20px;
+}
+body.dark {
+    background: #111;
+    color: #eee;
+}
+
+body.dark nav {
+    background: #000;
+}
+
+body.dark .card {
+    background: #222;
+    color: #eee;
+}
+
+body.dark footer {
+    background: #000;
+}
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.hero {
+    height: 80vh;
+    background: url('https://images.unsplash.com/photo-1522199710521-72d69614c702') center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-content {
+    background: rgba(0,0,0,0.6);
+    padding: 40px;
+    border-radius: 10px;
+    color: white;
+}

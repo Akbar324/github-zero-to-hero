@@ -3,410 +3,582 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Alex Dev — DevOps & Full-Stack Portfolio</title>
-  <meta name="description" content="DevOps Engineer & Full-Stack Developer specializing in Docker, CI/CD, Kubernetes, and cloud infrastructure." />
-  <meta property="og:title" content="Alex Dev — DevOps Portfolio" />
-  <meta property="og:type" content="website" />
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="css/index.css" />
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>" />
+  <title>Alex — Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- Background -->
-  <div class="bg-canvas"></div>
-  <div class="bg-orb bg-orb-1"></div>
-  <div class="bg-orb bg-orb-2"></div>
-  <div class="bg-orb bg-orb-3"></div>
 
-  <!-- Navigation -->
-  <nav class="nav">
-    <a href="index.html" class="nav-logo">Alex.dev</a>
-    <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="projects.html">Projects</a></li>
-      <li><a href="contact.html" class="nav-cta">Hire Me</a></li>
-    </ul>
-    <div class="nav-toggle" aria-label="Toggle menu">
-      <span></span><span></span><span></span>
+  <!-- Ambient background -->
+  <div class="bg-wrap">
+    <div class="orb orb-a"></div>
+    <div class="orb orb-b"></div>
+    <div class="orb orb-c"></div>
+    <div class="grain"></div>
+  </div>
+
+  <!-- ══ NAV ══ -->
+  <header class="nav">
+    <a href="#" class="logo">alex<span>.dev</span></a>
+    <nav class="nav-links">
+      <a href="#about">About</a>
+      <a href="#work">Work</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a href="#contact" class="nav-btn">Hire Me</a>
+  </header>
+
+  <!-- ══ HERO ══ -->
+  <section class="hero" id="home">
+    <div class="hero-left">
+      <div class="badge">
+        <span class="pulse"></span>
+        Open to opportunities
+      </div>
+      <h1>
+        I build things<br>
+        for the <em>web</em> &<br>
+        the <em>cloud</em>.
+      </h1>
+      <p class="hero-sub">
+        DevOps Engineer & Full-Stack Developer crafting
+        scalable systems, CI/CD pipelines, and
+        polished interfaces.
+      </p>
+      <div class="hero-cta">
+        <a href="#work" class="btn-primary">View Projects</a>
+        <a href="#contact" class="btn-ghost">Let's Talk ↗</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><strong>3+</strong><span>Years</span></div>
+        <div class="vline"></div>
+        <div class="stat"><strong>20+</strong><span>Projects</span></div>
+        <div class="vline"></div>
+        <div class="stat"><strong>99%</strong><span>Uptime</span></div>
+      </div>
     </div>
-  </nav>
 
-  <div class="page-wrapper">
-
-    <!-- ── HERO ── -->
-    <section id="hero" class="hero-section">
-      <div class="hero-content reveal">
-        <div class="hero-greeting">
-          <span class="greeting-dot"></span>
-          Available for work
+    <div class="hero-right">
+      <div class="card terminal">
+        <div class="terminal-bar">
+          <i class="dot r"></i><i class="dot y"></i><i class="dot g"></i>
+          <span>deploy.yml</span>
         </div>
-        <h1 class="hero-title">
-          Hi, I'm <span class="gradient-text">Alex</span><br />
-          <span class="typed-text">DevOps Engineer</span><span class="cursor">|</span>
-        </h1>
-        <p class="hero-desc">
-          I build resilient cloud infrastructure, automate deployment pipelines,
-          and ship full-stack products — from Dockerfile to production.
+        <pre>
+<s>name:</s> <b>Deploy to Production</b>
+
+<s>on:</s>
+  <s>push:</s>
+    <s>branches:</s> <b>[main]</b>
+
+<s>jobs:</s>
+  <s>build:</s>
+    <s>runs-on:</s> <b>ubuntu-latest</b>
+    <s>steps:</s>
+      - <s>name:</s> <b>Docker Build</b>
+        <s>run:</s> <b>docker build -t app .</b>
+      - <s>name:</s> <b>Deploy</b>
+        <s>run:</s> <b>./deploy.sh</b>
+
+<span class="caret">▋</span></pre>
+      </div>
+
+      <div class="floating-tags">
+        <span class="ftag">🐳 Docker</span>
+        <span class="ftag">⚙️ GitHub Actions</span>
+        <span class="ftag">☸️ Kubernetes</span>
+        <span class="ftag">☁️ AWS</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ ABOUT ══ -->
+  <section class="section" id="about">
+    <div class="about-grid">
+      <div class="about-text">
+        <p class="label">About Me</p>
+        <h2>Building systems<br>that <em>just work</em>.</h2>
+        <p>
+          I'm a DevOps engineer and full-stack developer who believes
+          great infrastructure should be invisible. I automate the boring
+          parts so teams can focus on shipping.
         </p>
-        <div class="hero-actions">
-          <a href="projects.html" class="btn btn-primary">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
-            View My Work
+        <p>
+          Currently deep in Kubernetes, Terraform, and GitOps. When I'm
+          not writing YAML, I'm building web apps and contributing to open source.
+        </p>
+        <div class="about-actions">
+          <a href="https://github.com" target="_blank" class="btn-ghost sm">GitHub ↗</a>
+          <a href="#" class="btn-ghost sm">Download CV ↓</a>
+        </div>
+      </div>
+
+      <div class="about-cards">
+        <div class="card mini-card">
+          <div class="mc-icon">🚀</div>
+          <h4>CI/CD</h4>
+          <p>Automated pipelines with GitHub Actions, Jenkins & GitLab CI.</p>
+        </div>
+        <div class="card mini-card">
+          <div class="mc-icon">🐳</div>
+          <h4>Containers</h4>
+          <p>Docker & Kubernetes for reproducible, scalable environments.</p>
+        </div>
+        <div class="card mini-card">
+          <div class="mc-icon">☁️</div>
+          <h4>Cloud</h4>
+          <p>AWS & GCP infrastructure managed with Terraform IaC.</p>
+        </div>
+        <div class="card mini-card">
+          <div class="mc-icon">📊</div>
+          <h4>Monitoring</h4>
+          <p>Grafana + Prometheus dashboards and Slack alerting.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ WORK ══ -->
+  <section class="section" id="work">
+    <div class="section-head">
+      <p class="label">Projects</p>
+      <h2>Selected Work</h2>
+    </div>
+
+    <!-- Featured -->
+    <div class="card featured">
+      <div class="feat-label">⭐ Featured</div>
+      <div class="feat-grid">
+        <div class="feat-info">
+          <div class="tag-row">
+            <span class="tag">DevOps</span>
+            <span class="tag t2">Docker</span>
+            <span class="tag t3">K8s</span>
+          </div>
+          <h3>GitOps Deployment Platform</h3>
+          <p>Full GitOps workflow with Argo CD, Helm charts, and GitHub Actions. Zero-downtime deploys, automatic rollback on failure, Vault secrets management, and multi-environment support (dev / staging / prod).</p>
+          <ul class="feat-list">
+            <li>✓ Zero-downtime rolling deployments</li>
+            <li>✓ Automated rollback on failure</li>
+            <li>✓ Secrets management via Vault</li>
+            <li>✓ Multi-environment pipelines</li>
+          </ul>
+          <div class="feat-actions">
+            <a href="https://github.com" target="_blank" class="btn-primary sm">GitHub ↗</a>
+            <a href="#" class="btn-ghost sm">Live Demo</a>
+          </div>
+        </div>
+        <div class="pipe-visual">
+          <div class="pipe-step card">
+            <span>📝</span>
+            <small>Git Push</small>
+          </div>
+          <div class="pipe-arr">→</div>
+          <div class="pipe-step card">
+            <span>⚙️</span>
+            <small>CI Build</small>
+          </div>
+          <div class="pipe-arr">→</div>
+          <div class="pipe-step card">
+            <span>🐳</span>
+            <small>Docker</small>
+          </div>
+          <div class="pipe-arr">→</div>
+          <div class="pipe-step card">
+            <span>☸️</span>
+            <small>K8s</small>
+          </div>
+          <div class="pipe-status">
+            <span class="pulse g"></span>
+            All systems operational
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Grid -->
+    <div class="projects-grid">
+      <div class="card proj-card">
+        <div class="proj-top">
+          <span class="proj-ico">🐳</span>
+          <div class="proj-links">
+            <a href="https://github.com" target="_blank">↗ GitHub</a>
+          </div>
+        </div>
+        <h4>Docker Compose Dev Stack</h4>
+        <p>Nginx, PostgreSQL, Redis, and SSL via Certbot — production-ready in one command.</p>
+        <div class="tag-row sm">
+          <span class="tag">Docker</span>
+          <span class="tag t2">Nginx</span>
+          <span class="tag">PostgreSQL</span>
+        </div>
+        <div class="proj-meta">⭐ 240 &nbsp;·&nbsp; 🍴 48</div>
+      </div>
+
+      <div class="card proj-card">
+        <div class="proj-top">
+          <span class="proj-ico">⚛️</span>
+          <div class="proj-links">
+            <a href="https://github.com" target="_blank">↗ GitHub</a>
+          </div>
+        </div>
+        <h4>SaaS Dashboard App</h4>
+        <p>React + Node.js SaaS with JWT auth, Docker deploy, and GitHub Actions to AWS ECS.</p>
+        <div class="tag-row sm">
+          <span class="tag t3">React</span>
+          <span class="tag t3">Node.js</span>
+          <span class="tag">AWS ECS</span>
+        </div>
+        <div class="proj-meta">⭐ 185 &nbsp;·&nbsp; 🍴 32</div>
+      </div>
+
+      <div class="card proj-card">
+        <div class="proj-top">
+          <span class="proj-ico">🤖</span>
+          <div class="proj-links">
+            <a href="https://github.com" target="_blank">↗ GitHub</a>
+          </div>
+        </div>
+        <h4>Server Monitor Bot</h4>
+        <p>Python Telegram bot monitoring CPU/RAM via Prometheus and sending real-time alerts.</p>
+        <div class="tag-row sm">
+          <span class="tag">Python</span>
+          <span class="tag t2">Prometheus</span>
+        </div>
+        <div class="proj-meta">⭐ 310 &nbsp;·&nbsp; 🍴 67</div>
+      </div>
+
+      <div class="card proj-card">
+        <div class="proj-top">
+          <span class="proj-ico">🏗️</span>
+          <div class="proj-links">
+            <a href="https://github.com" target="_blank">↗ GitHub</a>
+          </div>
+        </div>
+        <h4>AWS Terraform Modules</h4>
+        <p>Reusable IaC modules for VPC, EC2, RDS, S3 with S3 remote state and DynamoDB locking.</p>
+        <div class="tag-row sm">
+          <span class="tag">Terraform</span>
+          <span class="tag t2">AWS</span>
+        </div>
+        <div class="proj-meta">⭐ 520 &nbsp;·&nbsp; 🍴 89</div>
+      </div>
+
+      <div class="card proj-card">
+        <div class="proj-top">
+          <span class="proj-ico">📊</span>
+          <div class="proj-links">
+            <a href="https://github.com" target="_blank">↗ GitHub</a>
+          </div>
+        </div>
+        <h4>DevOps Metrics Dashboard</h4>
+        <p>Open-source Grafana dashboards for DORA metrics: deployment freq, MTTR, lead time.</p>
+        <div class="tag-row sm">
+          <span class="tag t3">Grafana</span>
+          <span class="tag">Prometheus</span>
+        </div>
+        <div class="proj-meta">⭐ 890 &nbsp;·&nbsp; 🍴 145</div>
+      </div>
+
+      <div class="card proj-card">
+        <div class="proj-top">
+          <span class="proj-ico">🔐</span>
+          <div class="proj-links">
+            <a href="https://github.com" target="_blank">↗ GitHub</a>
+          </div>
+        </div>
+        <h4>Secrets Rotation CLI</h4>
+        <p>Auto-rotates AWS IAM keys, syncs to GitHub Secrets, and sends Slack notifications.</p>
+        <div class="tag-row sm">
+          <span class="tag">Python</span>
+          <span class="tag t2">AWS IAM</span>
+        </div>
+        <div class="proj-meta">⭐ 210 &nbsp;·&nbsp; 🍴 38</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ SKILLS ══ -->
+  <section class="section" id="skills">
+    <div class="section-head">
+      <p class="label">My Stack</p>
+      <h2>Tools & Technologies</h2>
+    </div>
+
+    <div class="skills-wrap">
+      <div class="card skill-col">
+        <h4>DevOps & Cloud</h4>
+        <div class="skill-item">
+          <div class="si-head"><span>Docker</span><span>90%</span></div>
+          <div class="bar"><div class="bar-fill" style="--w:90%"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="si-head"><span>GitHub Actions</span><span>88%</span></div>
+          <div class="bar"><div class="bar-fill" style="--w:88%"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="si-head"><span>Kubernetes</span><span>75%</span></div>
+          <div class="bar"><div class="bar-fill" style="--w:75%"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="si-head"><span>AWS</span><span>80%</span></div>
+          <div class="bar"><div class="bar-fill" style="--w:80%"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="si-head"><span>Terraform</span><span>70%</span></div>
+          <div class="bar"><div class="bar-fill" style="--w:70%"></div></div>
+        </div>
+      </div>
+
+      <div class="card skill-col">
+        <h4>Development</h4>
+        <div class="skill-item">
+          <div class="si-head"><span>JavaScript / Node</span><span>85%</span></div>
+          <div class="bar"><div class="bar-fill" style="--w:85%"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="si-head"><span>Python</span><span>80%</span></div>
+          <div class="bar"><div class="bar-fill" style="--w:80%"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="si-head"><span>React</span><span>78%</span></div>
+          <div class="bar"><div class="bar-fill" style="--w:78%"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="si-head"><span>Bash / Shell</span><span>88%</span></div>
+          <div class="bar"><div class="bar-fill" style="--w:88%"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="si-head"><span>PostgreSQL</span><span>75%</span></div>
+          <div class="bar"><div class="bar-fill" style="--w:75%"></div></div>
+        </div>
+      </div>
+
+      <div class="card skill-col">
+        <h4>Monitoring & Tools</h4>
+        <div class="skill-item">
+          <div class="si-head"><span>Grafana</span><span>82%</span></div>
+          <div class="bar"><div class="bar-fill" style="--w:82%"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="si-head"><span>Prometheus</span><span>78%</span></div>
+          <div class="bar"><div class="bar-fill" style="--w:78%"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="si-head"><span>Nginx</span><span>85%</span></div>
+          <div class="bar"><div class="bar-fill" style="--w:85%"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="si-head"><span>Git</span><span>92%</span></div>
+          <div class="bar"><div class="bar-fill" style="--w:92%"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="si-head"><span>Linux</span><span>88%</span></div>
+          <div class="bar"><div class="bar-fill" style="--w:88%"></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ EXPERIENCE ══ -->
+  <section class="section" id="experience">
+    <div class="section-head">
+      <p class="label">Career</p>
+      <h2>Experience</h2>
+    </div>
+
+    <div class="timeline">
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="card tl-card">
+          <div class="tl-head">
+            <div>
+              <h4>Senior DevOps Engineer</h4>
+              <p class="tl-co">TechCorp Inc.</p>
+            </div>
+            <span class="tag">2022 — Present</span>
+          </div>
+          <p>Leading cloud migration to AWS EKS. Reduced deployment time by 70% with CI/CD automation. Manages Terraform IaC for 50+ microservices.</p>
+          <div class="tag-row sm" style="margin-top:.8rem">
+            <span class="tag t2">AWS</span><span class="tag t2">Kubernetes</span><span class="tag t2">Terraform</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="card tl-card">
+          <div class="tl-head">
+            <div>
+              <h4>Full-Stack Developer</h4>
+              <p class="tl-co">StartupXYZ</p>
+            </div>
+            <span class="tag">2020 — 2022</span>
+          </div>
+          <p>Built React/Node.js web applications. Introduced Docker for dev environments. Set up the company's first GitHub Actions pipeline.</p>
+          <div class="tag-row sm" style="margin-top:.8rem">
+            <span class="tag t3">React</span><span class="tag t3">Node.js</span><span class="tag t3">Docker</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="card tl-card">
+          <div class="tl-head">
+            <div>
+              <h4>Junior Developer</h4>
+              <p class="tl-co">Digital Agency</p>
+            </div>
+            <span class="tag">2019 — 2020</span>
+          </div>
+          <p>Built responsive websites and REST APIs. First exposure to Linux servers, Nginx config, and deployment workflows.</p>
+          <div class="tag-row sm" style="margin-top:.8rem">
+            <span class="tag">JavaScript</span><span class="tag">Nginx</span><span class="tag">Linux</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ CONTACT ══ -->
+  <section class="section" id="contact">
+    <div class="contact-wrap">
+      <div class="contact-left">
+        <p class="label">Get In Touch</p>
+        <h2>Let's build<br>something <em>great</em>.</h2>
+        <p>Open to full-time roles, freelance projects, and interesting collaborations. I reply within 24 hours.</p>
+
+        <div class="contact-info">
+          <div class="ci-row">
+            <span class="ci-ico">✉️</span>
+            <a href="mailto:alex@example.com">alex@example.com</a>
+          </div>
+          <div class="ci-row">
+            <span class="ci-ico">📍</span>
+            <span>Remote — Open to relocate</span>
+          </div>
+          <div class="ci-row">
+            <span class="ci-ico">⏱️</span>
+            <span>Replies within 24h</span>
+          </div>
+        </div>
+
+        <div class="socials">
+          <a href="https://github.com" target="_blank" class="soc-btn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.749 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
+            GitHub
           </a>
-          <a href="contact.html" class="btn btn-secondary">Let's Talk</a>
-        </div>
-        <div class="hero-stats">
-          <div class="stat">
-            <span class="stat-num">3+</span>
-            <span class="stat-label">Years Exp.</span>
-          </div>
-          <div class="stat-divider"></div>
-          <div class="stat">
-            <span class="stat-num">20+</span>
-            <span class="stat-label">Projects</span>
-          </div>
-          <div class="stat-divider"></div>
-          <div class="stat">
-            <span class="stat-num">99%</span>
-            <span class="stat-label">Uptime SLA</span>
-          </div>
+          <a href="https://linkedin.com" target="_blank" class="soc-btn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            LinkedIn
+          </a>
+          <a href="https://twitter.com" target="_blank" class="soc-btn">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.74l7.73-8.835L1.254 2.25H8.08l4.261 5.632zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            Twitter
+          </a>
         </div>
       </div>
 
-      <div class="hero-visual reveal" data-delay="200">
-        <div class="terminal-card glass">
-          <div class="terminal-header">
-            <span class="dot red"></span>
-            <span class="dot yellow"></span>
-            <span class="dot green"></span>
-            <span class="terminal-title">pipeline.yml</span>
+      <div class="card contact-form-card">
+        <form id="contact-form">
+          <div class="form-row">
+            <div class="fg">
+              <label>Name</label>
+              <input type="text" placeholder="Your Name" required />
+            </div>
+            <div class="fg">
+              <label>Email</label>
+              <input type="email" placeholder="you@email.com" required />
+            </div>
           </div>
-          <pre class="terminal-body"><span class="t-comment"># GitHub Actions CI/CD Pipeline</span>
-<span class="t-key">name:</span> <span class="t-val">Deploy to Production</span>
-
-<span class="t-key">on:</span>
-  <span class="t-key">push:</span>
-    <span class="t-key">branches:</span> <span class="t-val">[main]</span>
-
-<span class="t-key">jobs:</span>
-  <span class="t-key">build-and-deploy:</span>
-    <span class="t-key">runs-on:</span> <span class="t-val">ubuntu-latest</span>
-    <span class="t-key">steps:</span>
-      - <span class="t-key">uses:</span> <span class="t-val">actions/checkout@v4</span>
-      - <span class="t-key">name:</span> <span class="t-val">Build Docker Image</span>
-        <span class="t-key">run:</span> <span class="t-val">docker build -t app .</span>
-      - <span class="t-key">name:</span> <span class="t-val">Push &amp; Deploy</span>
-        <span class="t-key">run:</span> <span class="t-val">./deploy.sh</span>
-<span class="t-cursor">▋</span></pre>
-        </div>
-
-        <div class="floating-badges">
-          <div class="badge glass" style="--d:0s">🐳 Docker</div>
-          <div class="badge glass" style="--d:0.3s">⚙️ GitHub Actions</div>
-          <div class="badge glass" style="--d:0.6s">☸️ Kubernetes</div>
-          <div class="badge glass" style="--d:0.9s">☁️ AWS</div>
-        </div>
+          <div class="fg">
+            <label>Subject</label>
+            <input type="text" placeholder="Job opportunity / Project / Collab" required />
+          </div>
+          <div class="fg">
+            <label>Message</label>
+            <textarea placeholder="Tell me about your project, timeline, and what you need..." required></textarea>
+          </div>
+          <button type="submit" class="btn-primary full" id="send-btn">
+            Send Message ↗
+          </button>
+        </form>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <div class="divider"></div>
-
-    <!-- ── ABOUT ── -->
-    <section id="about">
-      <div class="about-grid">
-        <div class="reveal">
-          <p class="section-label">About Me</p>
-          <h2 class="section-title">Turning code into<br /><span class="gradient-text">scalable systems</span></h2>
-          <p style="color:var(--text-secondary); margin-bottom:1.5rem; max-width:480px;">
-            I'm a DevOps engineer and full-stack developer passionate about building automated,
-            cloud-native systems. Currently deep-diving into Kubernetes, Terraform, and GitOps.
-          </p>
-          <p style="color:var(--text-secondary); margin-bottom:2rem; max-width:480px;">
-            When I'm not writing YAML pipelines, I'm building web apps and contributing to open-source.
-            I believe great infrastructure is invisible — it just works.
-          </p>
-          <div class="about-links">
-            <a href="https://github.com" target="_blank" class="btn btn-secondary" style="padding:0.65rem 1.4rem; font-size:0.85rem;">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.749 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
-              GitHub
-            </a>
-            <a href="#" download class="btn btn-secondary" style="padding:0.65rem 1.4rem; font-size:0.85rem;">
-              ↓ Download CV
-            </a>
-          </div>
-        </div>
-
-        <div class="about-cards reveal" data-delay="150">
-          <div class="about-card card">
-            <div class="about-card-icon">🚀</div>
-            <h3>CI/CD Pipelines</h3>
-            <p>Automated build, test & deploy workflows using GitHub Actions, Jenkins, and GitLab CI.</p>
-          </div>
-          <div class="about-card card">
-            <div class="about-card-icon">🐳</div>
-            <h3>Containerization</h3>
-            <p>Docker & Kubernetes for scalable, reproducible environments across all stages.</p>
-          </div>
-          <div class="about-card card">
-            <div class="about-card-icon">☁️</div>
-            <h3>Cloud Infrastructure</h3>
-            <p>AWS & GCP infrastructure managed via Terraform and Infrastructure-as-Code.</p>
-          </div>
-          <div class="about-card card">
-            <div class="about-card-icon">🔒</div>
-            <h3>Security & Monitoring</h3>
-            <p>Grafana, Prometheus, and security scanning built into every pipeline.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <div class="divider"></div>
-
-    <!-- ── SKILLS ── -->
-    <section id="skills">
-      <div class="reveal" style="text-align:center; margin-bottom:4rem;">
-        <p class="section-label" style="justify-content:center;">My Stack</p>
-        <h2 class="section-title">Tools & Technologies</h2>
-      </div>
-
-      <div class="skills-grid">
-        <div class="skill-category card reveal" data-delay="0">
-          <h3 class="skill-cat-title">DevOps & Cloud</h3>
-          <div class="skill-list">
-            <div class="skill-item">
-              <div class="skill-info">
-                <span>Docker</span><span>90%</span>
-              </div>
-              <div class="skill-bar"><div class="skill-bar-fill" data-width="90%"></div></div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-info">
-                <span>GitHub Actions</span><span>88%</span>
-              </div>
-              <div class="skill-bar"><div class="skill-bar-fill" data-width="88%"></div></div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-info">
-                <span>Kubernetes</span><span>75%</span>
-              </div>
-              <div class="skill-bar"><div class="skill-bar-fill" data-width="75%"></div></div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-info">
-                <span>AWS</span><span>80%</span>
-              </div>
-              <div class="skill-bar"><div class="skill-bar-fill" data-width="80%"></div></div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-info">
-                <span>Terraform</span><span>70%</span>
-              </div>
-              <div class="skill-bar"><div class="skill-bar-fill" data-width="70%"></div></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="skill-category card reveal" data-delay="100">
-          <h3 class="skill-cat-title">Development</h3>
-          <div class="skill-list">
-            <div class="skill-item">
-              <div class="skill-info"><span>JavaScript / Node.js</span><span>85%</span></div>
-              <div class="skill-bar"><div class="skill-bar-fill" data-width="85%"></div></div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-info"><span>Python</span><span>80%</span></div>
-              <div class="skill-bar"><div class="skill-bar-fill" data-width="80%"></div></div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-info"><span>React</span><span>78%</span></div>
-              <div class="skill-bar"><div class="skill-bar-fill" data-width="78%"></div></div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-info"><span>Bash / Shell</span><span>88%</span></div>
-              <div class="skill-bar"><div class="skill-bar-fill" data-width="88%"></div></div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-info"><span>SQL / PostgreSQL</span><span>75%</span></div>
-              <div class="skill-bar"><div class="skill-bar-fill" data-width="75%"></div></div>
-            </div>
-          </div>
-        </div>
-
-        <div class="skill-category card reveal" data-delay="200">
-          <h3 class="skill-cat-title">Monitoring & Tools</h3>
-          <div class="skill-list">
-            <div class="skill-item">
-              <div class="skill-info"><span>Grafana</span><span>82%</span></div>
-              <div class="skill-bar"><div class="skill-bar-fill" data-width="82%"></div></div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-info"><span>Prometheus</span><span>78%</span></div>
-              <div class="skill-bar"><div class="skill-bar-fill" data-width="78%"></div></div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-info"><span>Nginx</span><span>85%</span></div>
-              <div class="skill-bar"><div class="skill-bar-fill" data-width="85%"></div></div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-info"><span>Git</span><span>92%</span></div>
-              <div class="skill-bar"><div class="skill-bar-fill" data-width="92%"></div></div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-info"><span>Linux</span><span>88%</span></div>
-              <div class="skill-bar"><div class="skill-bar-fill" data-width="88%"></div></div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Tech icons strip -->
-      <div class="tech-strip reveal" data-delay="300">
-        <div class="tech-icons">
-          <span class="tech-icon">🐳</span>
-          <span class="tech-icon">☸️</span>
-          <span class="tech-icon">⚙️</span>
-          <span class="tech-icon">☁️</span>
-          <span class="tech-icon">🐧</span>
-          <span class="tech-icon">🔧</span>
-          <span class="tech-icon">📊</span>
-          <span class="tech-icon">🔐</span>
-          <span class="tech-icon">🚀</span>
-          <span class="tech-icon">🐍</span>
-          <span class="tech-icon">⚛️</span>
-          <span class="tech-icon">🗄️</span>
-          <!-- Duplicated for infinite scroll -->
-          <span class="tech-icon">🐳</span>
-          <span class="tech-icon">☸️</span>
-          <span class="tech-icon">⚙️</span>
-          <span class="tech-icon">☁️</span>
-          <span class="tech-icon">🐧</span>
-          <span class="tech-icon">🔧</span>
-          <span class="tech-icon">📊</span>
-          <span class="tech-icon">🔐</span>
-          <span class="tech-icon">🚀</span>
-          <span class="tech-icon">🐍</span>
-          <span class="tech-icon">⚛️</span>
-          <span class="tech-icon">🗄️</span>
-        </div>
-      </div>
-    </section>
-
-    <div class="divider"></div>
-
-    <!-- ── EXPERIENCE ── -->
-    <section id="experience">
-      <div class="reveal" style="margin-bottom:3.5rem;">
-        <p class="section-label">Career</p>
-        <h2 class="section-title">Experience</h2>
-      </div>
-
-      <div class="timeline">
-        <div class="timeline-item reveal" data-delay="0">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content card">
-            <div class="timeline-header">
-              <div>
-                <h3>Senior DevOps Engineer</h3>
-                <p class="timeline-company">TechCorp Inc.</p>
-              </div>
-              <span class="tag">2022 — Present</span>
-            </div>
-            <p class="timeline-desc">
-              Leading cloud infrastructure migration to AWS EKS. Built CI/CD pipelines reducing
-              deployment time by 70%. Implemented Terraform IaC for 50+ microservices.
-            </p>
-            <div class="timeline-tags">
-              <span class="tag purple">AWS</span>
-              <span class="tag purple">Kubernetes</span>
-              <span class="tag purple">Terraform</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="timeline-item reveal" data-delay="100">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content card">
-            <div class="timeline-header">
-              <div>
-                <h3>Full-Stack Developer</h3>
-                <p class="timeline-company">StartupXYZ</p>
-              </div>
-              <span class="tag">2020 — 2022</span>
-            </div>
-            <p class="timeline-desc">
-              Built and maintained React/Node.js web applications. Introduced Docker for dev
-              environments. Set up the company's first GitHub Actions workflow for automated testing.
-            </p>
-            <div class="timeline-tags">
-              <span class="tag coral">React</span>
-              <span class="tag coral">Node.js</span>
-              <span class="tag coral">Docker</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="timeline-item reveal" data-delay="200">
-          <div class="timeline-dot"></div>
-          <div class="timeline-content card">
-            <div class="timeline-header">
-              <div>
-                <h3>Junior Developer</h3>
-                <p class="timeline-company">Digital Agency</p>
-              </div>
-              <span class="tag">2019 — 2020</span>
-            </div>
-            <p class="timeline-desc">
-              Developed responsive websites and REST APIs. First exposure to Linux servers,
-              Nginx configuration, and deployment workflows. Built foundational DevOps mindset.
-            </p>
-            <div class="timeline-tags">
-              <span class="tag">JavaScript</span>
-              <span class="tag">Nginx</span>
-              <span class="tag">Linux</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <div class="divider"></div>
-
-    <!-- ── CTA BAND ── -->
-    <section id="cta">
-      <div class="cta-band glass reveal">
-        <div>
-          <h2 class="section-title" style="margin-bottom:0.5rem;">Ready to build something great?</h2>
-          <p style="color:var(--text-secondary);">Open to full-time roles, freelance projects & collaboration.</p>
-        </div>
-        <a href="contact.html" class="btn btn-primary" style="white-space:nowrap;">
-          Start a Conversation →
-        </a>
-      </div>
-    </section>
-
-  </div><!-- end page-wrapper -->
-
-  <!-- Footer -->
-  <footer>
-    <div class="footer">
-      <p class="footer-copy">© <span class="year"></span> Alex Dev. Built with ❤️ & GitHub Actions.</p>
-      <div class="footer-social">
-        <a href="https://github.com" target="_blank" title="GitHub">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.749 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/></svg>
-        </a>
-        <a href="https://linkedin.com" target="_blank" title="LinkedIn">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-        </a>
-        <a href="https://twitter.com" target="_blank" title="Twitter">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.74l7.73-8.835L1.254 2.25H8.08l4.261 5.632zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-        </a>
-      </div>
+  <!-- ══ FOOTER ══ -->
+  <footer class="footer">
+    <span>© <span id="yr"></span> Alex Dev — Built with ❤️ & GitHub Actions</span>
+    <div class="footer-links">
+      <a href="#home">Home</a>
+      <a href="#work">Work</a>
+      <a href="#contact">Contact</a>
     </div>
   </footer>
 
-  <script src="js/main.js"></script>
+  <script>
+    // Year
+    document.getElementById('yr').textContent = new Date().getFullYear();
+
+    // Nav scroll effect
+    const nav = document.querySelector('.nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 40);
+    });
+
+    // Scroll reveal
+    const revealEls = document.querySelectorAll('.card, .hero-left, .hero-right, .about-text, .section-head, .timeline, .contact-left, .contact-form-card');
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+    revealEls.forEach(el => io.observe(el));
+
+    // Skill bars on scroll
+    const bars = document.querySelectorAll('.bar-fill');
+    const barsIO = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.style.width = e.target.style.getPropertyValue('--w') || e.target.style.cssText.match(/--w:([\d%]+)/)?.[1] || '0%';
+          barsIO.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.5 });
+    bars.forEach(b => barsIO.observe(b));
+
+    // Contact form
+    document.getElementById('contact-form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const btn = document.getElementById('send-btn');
+      btn.textContent = 'Sending…';
+      btn.disabled = true;
+      setTimeout(() => {
+        btn.textContent = '✓ Message Sent!';
+        btn.style.background = 'linear-gradient(135deg,#22c55e,#16a34a)';
+        e.target.reset();
+        setTimeout(() => {
+          btn.textContent = 'Send Message ↗';
+          btn.style.background = '';
+          btn.disabled = false;
+        }, 3000);
+      }, 1400);
+    });
+
+    // Mouse parallax orbs
+    document.addEventListener('mousemove', (e) => {
+      const x = (e.clientX / window.innerWidth - 0.5) * 30;
+      const y = (e.clientY / window.innerHeight - 0.5) * 30;
+      document.querySelectorAll('.orb').forEach((o, i) => {
+        const f = (i + 1) * 0.35;
+        o.style.transform = `translate(${x * f}px, ${y * f}px)`;
+      });
+    });
+  </script>
 </body>
 </html>
